@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--xmlns:fresco="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/list_item_image"-->
+        <!--android:layout_width="106dp"-->
+        <!--android:layout_height="149dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--fresco:placeholderImage="@drawable/default_img_250x350"-->
+        <!--/>-->
+    <com.android.imageloadercompact.CompactImageView
+        xmlns:compact="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_item_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        compact:placeholderImage="@mipmap/default_img_250x350" />
+
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_item_image"
+        android:layout_alignRight="@+id/list_item_image"
+        android:layout_below="@+id/list_item_image"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/list_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:text="title"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_blank"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_alignLeft="@+id/list_item_image"
+        android:layout_alignRight="@+id/list_item_image"
+        android:layout_below="@+id/text_layout" />
+
+</RelativeLayout>
